@@ -1,0 +1,2 @@
+D:/new_version_of_recycle_app/android/app/.cxx/Debug/t3a18566/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/new_version_of_recycle_app/android/app/.cxx/Debug/t3a18566/armeabi-v7a/CMakeFiles/rebuild_cache.dir
