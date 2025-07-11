@@ -21,7 +21,7 @@ class _RegisterPageState extends State<RegisterPage> {
   String _email = '';
   String _password = '';
   String _phone = '';
-  String _role = '';
+  String _role = 'user';
 
   bool _isLoading = false;
 //function اختيار الصورة
@@ -59,7 +59,7 @@ class _RegisterPageState extends State<RegisterPage> {
           email: _email,
           password: _password,
           phone: _phone,
-          role: _role,
+          role: "user",
         );
 
         if (response['message'] == "User registered successfully.") {
@@ -165,31 +165,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Text(
-                        "الدور",
-                        textAlign: TextAlign.right,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: "Almarai",
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF1D8560), // لون النص الأخضر الداكن
-                        ),
-                      ),
-                    ),
-                    TextFormField(
-                      decoration: CustomStyles.customInputDecoration(
-                          hintText: "admin, user"),
-                      validator: (value) =>
-                          value!.isEmpty ? 'يرجى دور المستخدم' : null,
-                      onSaved: (value) => _role = value!,
-                      textAlign: TextAlign.right, // محاذاة النص لليمين
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black87,
-                      ),
-                    ),
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Text(

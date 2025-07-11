@@ -47,7 +47,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
               Color(0xff9ce1d4), // Start color
@@ -59,7 +59,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
         ),
         child: Center(
           child: ListView(children: [
-            Text(
+            const Text(
               textAlign: TextAlign.center,
               "إحصائيات عمليات البيع",
               style: TextStyle(
@@ -88,7 +88,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                         height: 110,
                         child: Image.asset("assets/images/Logo.png",
                             fit: BoxFit.fitHeight)),
-                    Text(
+                    const Text(
                       "بيئتك هي بيئتك",
                       style: TextStyle(
                           fontSize: 22,
@@ -106,7 +106,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
               padding: const EdgeInsets.all(14.0),
               child: Row(
                 children: [
-                  Container(
+                  SizedBox(
                     height: 200,
                     width: 180,
                     child: PieChart(
@@ -124,7 +124,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                         padding: const EdgeInsets.symmetric(vertical: 8.0),
                         child: Container(
                             width: 200,
-                            child: Text(
+                            child: const Text(
                               "إجمالي المنتجات المعاد تدويرها حتى الان",
                               softWrap: true,
                               textAlign: TextAlign.center,
@@ -134,7 +134,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             " منتج ",
                             style: TextStyle(
                                 fontSize: 30,
@@ -143,7 +143,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                           ),
                           Text(
                             "$total",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 30,
                                 fontFamily: "Almarai",
@@ -156,8 +156,8 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
                 textAlign: TextAlign.center,
                 "هدفنا الوصول الى 100 الف منتج معاد تدويره",
@@ -168,9 +168,9 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                     color: Color(0xFF1D8560)),
               ),
             ),
-            SizedBox(height: 100,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            const SizedBox(height: 100,),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
                 textAlign: TextAlign.center,
                 "ساعدنا في تحقيق هدفنا",
@@ -188,7 +188,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                 decoration: BoxDecoration(
                     color: Color(0xFFf25d01),
                     borderRadius: BorderRadius.circular(25)),
-                child: Center(
+                child: const Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -202,7 +202,7 @@ class _SalesStatisticsState extends State<SalesStatistics> {
                     )),
               ),
             ),
-            Text(
+            const Text(
               textAlign: TextAlign.center,
               "شركاء نجاحنا",
               style: TextStyle(
@@ -222,12 +222,12 @@ class _SalesStatisticsState extends State<SalesStatistics> {
       final isTouched = i == 0; // Example: highlight the first section
       final color = Colors.primaries[i % Colors.primaries.length];
       return PieChartSectionData(
-        color: Color(0xFF73afaf),
+        color: const Color(0xFF73afaf),
         value: values[i],
-        borderSide: BorderSide(color: Colors.white),
+        borderSide: const BorderSide(color: Colors.white),
         title: '${values[i].toInt()}%',
         radius: isTouched ? 100 : 90,
-        titleStyle: TextStyle(
+        titleStyle: const TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold,
           color: Colors.white,

@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:new_version_of_recycle_app/services/getApiService.dart';
 import 'package:http/http.dart' as http;
 import 'Constants/CustomStyles.dart';
@@ -15,7 +14,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  TextEditingController _dateController = TextEditingController();
+  final TextEditingController _dateController = TextEditingController();
   final TextEditingController phoneNumberController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
   final TextEditingController dayController = TextEditingController();

@@ -15,7 +15,7 @@ class FirstScreen extends StatefulWidget {
 class _FirstScreenState extends State<FirstScreen> {
   int _selectedIndex = 1;
   int totalCoins=0;
-  final List<Widget> _pages = [ProfilePage(), MainPage(), CoinsPage()];
+  final List<Widget> _pages = [const ProfilePage(), const MainPage(), const CoinsPage()];
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;

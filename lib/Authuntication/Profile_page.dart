@@ -9,16 +9,13 @@ class ProfilePage extends StatefulWidget {
   @override
   State<ProfilePage> createState() => _ProfilePageState();
 }
-
 class _ProfilePageState extends State<ProfilePage> {
   late bool isLoggedIn;
 
   @override
   void initState() {
     super.initState();
-    setState(() {
-    });
-    isLoggedIn = Globals().isLoggedIn;
+    // مناداة واحدة فقط عند الدخول للصفحة
   }
 
   void updateLoginStatus(bool status) {
@@ -29,11 +26,10 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    setState(() {
-    });
+    isLoggedIn = Globals().isLoggedIn;
     return Scaffold(
       body: Center(
-        child: Globals().isLoggedIn
+        child: isLoggedIn
             ? UserProfilePage()
             : UnloginPage(
           onLogin: () {
